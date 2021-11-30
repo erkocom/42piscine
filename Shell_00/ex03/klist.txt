@@ -1,0 +1,5 @@
+Credentials cache: API:211C9A4C-437D-4EF1-9971-DB7BCC909009
+        Principal: oerkoc@42KOCAELI.COM.TR
+
+  Issued                Expires               Principal
+Nov 27 17:32:30 2021  Nov 28 03:32:30 2021  krbtgt/42KOCAELI.COM.TR@42KOCAELI.COM.TR
