@@ -1,32 +1,35 @@
-#include <stdio.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_rev_int_tab.c                                   :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: oerkoc <oerkoc@student.42kocaeli.com.tr>   +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/12/02 12:45:43 by oerkoc            #+#    #+#             */
+/*   Updated: 2021/12/02 13:13:02 by oerkoc           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-void ft_rev_int_tab(int *tab, int size)
+void	ft_swap(int *a, int *b)
 {
-	int new_tab[size];
-	int i;
-	int a;
-	int b;
+	int	c;
 
-	i = 0;
-	a = 0;
-	b = size;
-
-	while (i <= size)
-	{
-		new_tab[b-1] = *(tab + i);
-		i++;
-		b--;
-	}
-	while (a < size)
-	{
-		printf("%d, ", new_tab[a]);
-		a++;
-	}
+	c = *a;
+	*a = *b;
+	*b = c;
 }
 
-int main()
+void	ft_rev_int_tab(int *tab, int size)
 {
-	int size = 5;
-	int tab[5] = {1, 2, 3, 4, 5};
-	ft_rev_int_tab(tab, size);
+	int	i;
+	int	c;
+
+	i = 0;
+	c = size - 1;
+	while (i < size / 2)
+	{
+		ft_swap((tab + i), (tab + c));
+		i++;
+		c--;
+	}
 }

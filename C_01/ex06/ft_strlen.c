@@ -1,21 +1,23 @@
-#include <stdio.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: oerkoc <oerkoc@student.42kocaeli.com.tr>   +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/12/02 12:41:45 by oerkoc            #+#    #+#             */
+/*   Updated: 2021/12/02 12:45:00 by oerkoc           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-int ft_strlen(char *str)
+int	ft_strlen(char *str)
 {
-	int i;
+	int	i;
 
 	i = 0;
-	while ( *(str + i) != '\0')
+	while (str[i] != 0)
 	{
 		i++;
 	}
-	return(i);
-}
-
-int main()
-{
-	int x;
-
-	x = ft_strlen("Selam");
-	printf("%d", x);
+	return (i);
 }

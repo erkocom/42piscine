@@ -1,11 +1,27 @@
-void ft_ultimate_div_mod(int *a, int *b)
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_ultimate_div_mod.c                              :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: oerkoc <oerkoc@student.42kocaeli.com.tr>   +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/12/02 12:28:23 by oerkoc            #+#    #+#             */
+/*   Updated: 2021/12/02 12:32:31 by oerkoc           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include <stdio.h>
+
+void	ft_ultimate_div_mod(int *a, int *b)
 {
-	int c;
-	
-	if (*b != 0)
+	int	x;
+	int	y;
+
+	if (b != 0)
 	{
-		c = *a;
-		*a = *a / *b;
-		*b = c / *b;
+		x = *a / *b;
+		y = *a % *b;
+		*a = x;
+		*b = y;
 	}
 }

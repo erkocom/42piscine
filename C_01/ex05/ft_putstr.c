@@ -1,15 +1,25 @@
-void ft_putchar(char c)
-{
-	write(1, &c, 1);
-}
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: oerkoc <oerkoc@student.42kocaeli.com.tr>   +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/12/02 12:33:17 by oerkoc            #+#    #+#             */
+/*   Updated: 2021/12/02 12:40:54 by oerkoc           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-void ft_putstr(char *str)
+#include <unistd.h>
+
+void	ft_putstr(char *str)
 {
-	int i;
+	int	i;
+
 	i = 0;
-	while (*(str + i) != '\0')
+	while (str[i] != '\0')
 	{
-		ft_putchar(*(str + i));
+		write(1, &str[i], 1);
 		i++;
 	}
 }
