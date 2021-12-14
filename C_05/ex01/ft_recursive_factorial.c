@@ -6,15 +6,12 @@
 /*   By: oerkoc <oerkoc@student.42kocaeli.com.tr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/13 17:14:48 by oerkoc            #+#    #+#             */
-/*   Updated: 2021/12/13 17:23:57 by oerkoc           ###   ########.fr       */
+/*   Updated: 2021/12/14 12:49:23 by oerkoc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_recursive_factorial(int nb)
 {
-	int	i;
-
-	i = 1;
 	if (nb < 0)
 		return (0);
 	else if (nb == 0)
@@ -23,8 +20,7 @@ int	ft_recursive_factorial(int nb)
 		return (1);
 	else
 	{
-		i = ft_recursive_factorial(nb - 1);
-		i = i * nb;
-		return (i);
+		nb = nb * ft_recursive_factorial(nb - 1);
+		return (nb);
 	}
 }

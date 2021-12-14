@@ -6,11 +6,11 @@
 /*   By: oerkoc <oerkoc@student.42kocaeli.com.tr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/13 20:41:48 by oerkoc            #+#    #+#             */
-/*   Updated: 2021/12/13 20:59:26 by oerkoc           ###   ########.fr       */
+/*   Updated: 2021/12/14 13:06:22 by oerkoc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_is_prime(int nb)
+int	ft_is_prime(int nb)
 {
 	int	i;
 
@@ -28,11 +28,11 @@ int ft_is_prime(int nb)
 
 int	ft_find_next_prime(int nb)
 {
-	int i;
-
-	while (!(ft_is_prime(nb)))
+	if (nb < 0)
+		return (2);
+	while (nb < 2147483647 && !(ft_is_prime(nb)))
 	{
 		nb++;
 	}
+	return (nb);
 }
-
